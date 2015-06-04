@@ -1,8 +1,0 @@
-#!/usr/bin/python2
-
-import random
-
-with open("liste") as f:
-    content = f.readlines()
-
-print random.choice(content).rstrip() + " !!!"
