@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Resto Finder</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <script src="js/jquery-2.1.4.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <h1>Resto Finder</h1>
+      </div>
+      <div class="row">
+        <p>Please enter your choices :</p>
+        <textarea class="form-control" rows="3" name="choices">
+          Choice1
+          Choice2
+          ...
+        </textarea>
+        <button onclick="myFunction()">Envoyer</button>
+        <p id="output"></p>
+        </form>
+      </div>
+    </div>
+
+    <script>
+    function myFunction() {
+      var lines = $('textarea').val().split('\n');
+      var x = document.getElementById("output")
+      var z = (Math.floor((Math.random() * 50) + 0))
+
+      alert(lines[z % lines.length]);
+      x.innerHTML = lines[z % lines.length];
+    }
+    </script>
+  </body>
+</html>
